@@ -18,13 +18,40 @@
 		</p>
 		<form action="" method="post">
 			<label for="first_name">First Name</label>
-			<input type="text" id="first_name" />
+			<input
+				type="text"
+				id="first_name"
+				aria-placeholder="Jean"
+				placeholder="Jean"
+				required
+			/>
 
 			<label for="last_name">Last Name</label>
-			<input type="text" id="last_name" />
-			<label for="user_email">Email</label>
-			<input type="email" name="user_email" id="user_email" />
+			<input
+				type="text"
+				id="last_name"
+				placeholder="Doe"
+				aria-placeholder="Doe"
+				required
+			/>
+			<label for="user_email">Email*</label>
+			<input
+				type="email"
+				name="user_email"
+				id="user_email"
+				placeholder="jane@doe.com"
+				required
+			/>
 			<label for="phone_number">Phone Number</label>
+			<!-- Valid formats:
+
+                (123) 456-7890
+                (123)456-7890
+                123-456-7890
+                123.456.7890
+                1234567890
+                +31636363634
+                075-63546725 -->
 			<input
 				type="text"
 				id="phone_number"
@@ -32,9 +59,9 @@
             "
 			/>
 			<label for="password">Password</label>
-			<input type="password" id="password" />
+			<input type="password" id="password" required />
 			<label for="password_confim">Confirm password</label>
-			<input type="password" id="password_confim" />
+			<input type="password" id="password_confim" required />
 			<button type="submit">Submit</button>
 
 			<p>Already have an account?</p>
