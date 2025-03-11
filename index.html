@@ -7,99 +7,148 @@
 		<title>Sign up for bread</title>
 		<link rel="stylesheet" href="css/style.css" />
 		<script src="js/script.js" defer></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+			rel="stylesheet"
+		/>
 	</head>
 	<body>
-		<div class="container">
-            <section>
-                <h1>Welcome to communism</h1>
-                <p>
-                    workers of the motherland! this is a place to sign up for bread,
-                    comrade
-                </p>
-                <p>
-                    your bread will be state financed and delivered to your housing
-                    unit.
-                </p>
-            </section>
-            <form action="" method="post">
-                <fieldset>
-                    <label for="first_name">First Name</label>
-                    <input
-                        type="text"
-                        id="first_name"
-                        aria-placeholder="Jean"
-                        placeholder="Jean"
-                        required
-                    />
-                    <label for="last_name">Last Name</label>
-                    <input
-                        type="text"
-                        id="last_name"
-                        placeholder="Doe"
-                        aria-placeholder="Doe"
-                        required
-                    />
-                </fieldset>
-                <fieldset>
-                    <label for="user_email">Email*</label>
-                    <input
-                        type="email"
-                        name="user_email"
-                        id="user_email"
-                        placeholder="jane@doe.com"
-                        required
-                    />
-                    <label for="phone_number">Phone Number</label>
-                    <!-- Valid formats:
-                            
-                                            (123) 456-7890
-                                            (123)456-7890
-                                            123-456-7890
-                                            123.456.7890
-                                            1234567890
-                                            +31636363634
-                                            075-63546725 -->
-                    <input
-                        type="text"
-                        id="phone_number"
-                        placeholder="+31636363634"
-                        pattern="/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im
-                                        "
-                    />
-                </fieldset>
-                <fieldset>
-                    <label for="password">Password</label>
-                    <input type="password" id="password" required />
-                    <label for="password_confim">Confirm password</label>
-                    <input type="password" id="password_confim" required />
-                </fieldset>
-                <fieldset>
-                    <label for="bread_number">Number of bread</label>
-                    <input
-                        type="number"
-                        name="bread_number"
-                        id="bread_number"
-                        min="1"
-                        max="5"
-                    />
-                    <select name="bread_type" id="bread_type">
-                        <option value="ciabatta">Ciabatta</option>
-                        <option value="baguette">Baguette</option>
-                        <option value="bagel">Bagel</option>
-                        <option value="naan">Naan</option>
-                        <option value="vollkorn">Vollkornbrot</option>
-                        <option value="banana">Banana bread</option>
-                    </select>
-                    <label for="subscribe">
-                        Want to subscribe for our daily bread delivery?
-                    </label>
-                    <input type="checkbox" name="subscribe" id="subscribe" />
-                    <button type="submit">Submit</button>
-                </fieldset>
-            </form>
-        </div>
-
-		<p>Already have an account?</p>
-		<a href="http://">Log in</a>
+		<main>
+			<div class="container">
+				<img
+					class="background-image"
+					src="media/bread-background.jpg"
+					alt="bread"
+				/>
+			</div>
+			<div class="container">
+				<section>
+					<h1>Welcome to communism</h1>
+					<p>
+						workers of the motherland! this is a place to sign up
+						for bread, comrade
+					</p>
+					<p>
+						your bread will be state financed and delivered to your
+						housing unit.
+					</p>
+				</section>
+				<section>
+					<form action="" method="post">
+						<fieldset>
+							<div>
+								<label for="first_name">First Name</label>
+								<input
+									type="text"
+									id="first_name"
+									aria-placeholder="Jean"
+									placeholder="Jean"
+									required
+								/>
+							</div>
+							<div>
+								<label for="last_name">Last Name</label>
+								<input
+									type="text"
+									id="last_name"
+									placeholder="Doe"
+									aria-placeholder="Doe"
+									required
+								/>
+							</div>
+						</fieldset>
+						<fieldset>
+							<div>
+								<label for="user_email">Email*</label>
+								<input
+									type="email"
+									name="user_email"
+									id="user_email"
+									placeholder="jean@doe.com"
+									required
+								/>
+							</div>
+							<div>
+								<label for="phone_number">Phone Number</label>
+								<!-- Valid formats:
+            
+                                                                                        (123) 456-7890
+                                                                                        (123)456-7890
+                                                                                        123-456-7890
+                                                                                        123.456.7890
+                                                                                        1234567890
+                                                                                        +31636363634
+                                                                                        075-63546725 -->
+								<input
+									type="text"
+									id="phone_number"
+									placeholder="+31636363634"
+									pattern="/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im
+                                                                                    "
+								/>
+							</div>
+						</fieldset>
+						<fieldset>
+							<div>
+								<label for="password">Password</label>
+								<input type="password" id="password" required />
+							</div>
+							<div>
+								<label for="password_confim">
+									Confirm password
+								</label>
+								<input
+									type="password"
+									id="password_confim"
+									required
+								/>
+							</div>
+						</fieldset>
+						<fieldset>
+							<div>
+								<label for="subscribe">
+									Want to subscribe for our daily bread
+									delivery?
+								</label>
+								<input
+									type="checkbox"
+									name="subscribe"
+									id="subscribe"
+								/>
+								<button type="submit">Submit</button>
+							</div>
+                            <div>
+								<label for="bread_number">
+									Number of bread
+								</label>
+								<input
+									type="number"
+									name="bread_number"
+									id="bread_number"
+									min="1"
+									max="5"
+								/>
+								<select name="bread_type" id="bread_type">
+									<option value="ciabatta">Ciabatta</option>
+									<option value="baguette">Baguette</option>
+									<option value="bagel">Bagel</option>
+									<option value="naan">Naan</option>
+									<option value="vollkorn">
+										Vollkornbrot
+									</option>
+									<option value="banana">Banana bread</option>
+								</select>
+							</div>
+						</fieldset>
+					</form>
+				</section>
+				<section>
+					<p>Already have an account?</p>
+					<a href="/">Log in</a>
+				</section>
+			</div>
+		</main>
 	</body>
 </html>
