@@ -4,7 +4,8 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Sign up for bread</title>
+		<title>Bread Sign up</title>
+        <link href="/media/favicon.ico" rel="icon" type="image/x-icon">
 		<link rel="stylesheet" href="css/style.css" />
 		<script src="js/script.js" defer></script>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,34 +16,43 @@
 		/>
 	</head>
 	<body>
-        <header>
-            <nav>
-                <ul>
-                    
-                </ul>
-            </nav>
-        </header>
 		<main>
-			<div class="container">
-				<img
-					class="background-image"
-					src="media/bread-background.jpg"
-					alt="bread"
-				/>
+			<div class="hero">
+				<div class="logo">
+					<img
+						src="media/icons8-bread-loaf-96.png"
+						alt="bread logo"
+					/>
+					<h1>BreadLand</h1>
+					<div class="logo-background"></div>
+				</div>
+				<p class="image-credit">
+					Photo by
+					<a href="https://unsplash.com/@louiogbearnaisen">
+						Louise Lyshøj
+					</a>
+					on
+					<a
+						href="https://unsplash.com/photos/sliced-breads-on-white-surface-WHJTaLqonkU"
+					>
+						Unsplash
+					</a>
+				</p>
 			</div>
 			<div class="container">
-				<section>
-					<h1>Welcome to Communism!</h1>
+				<section class="intro">
 					<p>
-						Workers of the motherland. This is a place to sign up
-						for bread, comrade.
+						Welcome to Breadland, fellow bread enjoyer. This is a
+						place to sign up for bread, with gusto.
 					</p>
 					<p>
-						Your bread will be state financed and delivered to your
-						housing unit.
+						Get that bread. You
+						<em>know</em>
+						you need it.
 					</p>
 				</section>
-				<section>
+				<section class="form">
+					<h2>Sign up for bread</h2>
 					<form action="" method="post">
 						<fieldset>
 							<div>
@@ -114,51 +124,30 @@
 							</div>
 						</fieldset>
 						<fieldset>
-							<div>
-								<label for="subscribe">
-									Want to subscribe for our daily bread
-									delivery?
-								</label>
+							<div class="checkbox">
 								<input
 									type="checkbox"
 									name="subscribe"
 									id="subscribe"
 								/>
-								<button type="submit">Submit</button>
-							</div>
-                            <div>
-								<label for="bread_number">
-									Number of bread
+								<label for="subscribe">
+									Subscribe to our daily bread.
 								</label>
-								<input
-									type="number"
-									name="bread_number"
-									id="bread_number"
-									min="1"
-									max="5"
-								/>
-								<select name="bread_type" id="bread_type">
-									<option value="ciabatta">Ciabatta</option>
-									<option value="baguette">Baguette</option>
-									<option value="bagel">Bagel</option>
-									<option value="naan">Naan</option>
-									<option value="vollkorn">
-										Vollkornbrot
-									</option>
-									<option value="banana">Banana bread</option>
-								</select>
 							</div>
 						</fieldset>
 					</form>
 				</section>
 				<section>
-					<p>Already have an account?</p>
-					<a href="/">Log in</a>
+					<button type="submit">Create Account</button>
+					<p>
+						Already have an account?
+						<a href="/">Log in</a>
+					</p>
 				</section>
 			</div>
 		</main>
-        <footer>
-            <p>&copy; 2021 Bread for all</p>
-        </footer>
+		<footer>
+			<p>&copy; 2025 Bread for all 🥖</p>
+		</footer>
 	</body>
 </html>
