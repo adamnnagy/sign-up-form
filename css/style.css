@@ -3,7 +3,7 @@
 	--background-color: #fff;
 	--main-text-color: #000;
 	--accent-color: #eaeaea;
-	--footer-height: 5rem;
+	--footer-height: 2rem;
 	--button-color: green;
 }
 
@@ -12,14 +12,16 @@
 ::before {
 	box-sizing: inherit;
 }
-
-body {
-	/* display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;*/
+h2 {
 	margin: 0;
-	height: clamp(100vh, 100%, 100vh);
+	padding: 0;
+}
+a {
+	color: var(--main-text-color);
+}
+body {
+	margin: 0;
+	/* height: clamp(100%, 100vh, 100vh); */
 	font-family: Inter, sans-serif;
 }
 footer {
@@ -30,12 +32,6 @@ footer {
 	color: var(--main-text-color);
 	width: 100%;
 	height: var(--footer-height);
-	/* position: absolute;
-    bottom: 0; */
-}
-a {
-	/* text-decoration: none; */
-	color: var(--main-text-color);
 }
 .hero {
 	position: relative;
@@ -43,8 +39,8 @@ a {
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	height: calc(100vh - var(--footer-height));
-	/* object-fit: ; */
+	/* height: clamp(600px, (calc(100vh - var(--footer-height)), 100vh)); */
+	height: max(600px, calc(100vh - var(--footer-height)));
 }
 
 .logo {
@@ -58,29 +54,22 @@ a {
 	z-index: 1;
 	color: var(--accent-color);
 	background-color: rgba(0, 0, 0, 0.3);
-	width: 100%;
+	width: clamp(20px, 100%, 100%);
 	z-index: 1;
 }
 .logo img {
 	position: relative;
-	/* left: 50%;
-    transform: translate(-50%, 0);
-    object-fit: fill; */
 	z-index: 2;
 }
 .logo h1 {
 	position: relative;
 	display: inline;
-	/* top: 50%; */
-	/* left: 50%; */
-	/* transform: translate(-50%, 0); */
 	z-index: 2;
-	font-size: 4rem;
+	font-size: 2.5rem;
 	color: var(--accent-color);
 	text-align: center;
 	font-weight: bold;
 	font-variant-caps: all-small-caps;
-	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 .image-credit {
 	position: absolute;
@@ -88,12 +77,10 @@ a {
 	left: 50%;
 	transform: translate(-50%, 0);
 	font-size: small;
-	/* color: var(--accent-color); */
 }
 main {
 	display: grid;
 	grid-template-columns: 1fr 2fr;
-	grid-template-rows: 1fr;
 	gap: 0px 0px;
 }
 .container {
@@ -103,8 +90,8 @@ main {
 }
 section {
 	background-color: var(--accent-color);
-	padding: 2rem 1rem;
-	height: 100%;
+	padding: 2rem 2rem;
+	/* height: 20vh; */
 }
 .intro {
 	display: flex;
@@ -118,18 +105,18 @@ section {
 	padding: 0;
 }
 
-section.form {
+section.form-container {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
+	justify-content: center;
 	background-color: var(--background-color);
 }
 
 form {
 	display: flex;
 	flex-direction: column;
-    justify-content: flex-start;
-    height: 100%;
+	justify-content: flex-start;
+	/* height: clamp(300px, 100%, 500px); */
 }
 
 fieldset {
@@ -138,7 +125,7 @@ fieldset {
 	display: flex;
 	flex-direction: row;
 	width: 50%;
-    height: clamp(100px, 50vh, 100%);
+	/* height: clamp(100px, 50vh, 100%); */
 	justify-content: space-between;
 	align-items: center;
 }
@@ -153,34 +140,32 @@ fieldset > div {
 input {
 	border: 2px solid var(--accent-color);
 	border-radius: 0.25rem;
-    padding: 0.25rem 0.5rem;
+	padding: 0.25rem 0.5rem;
 	font-size: 1rem;
-    /* padding: 0; */
-    margin: 0;
+	margin: 0;
 }
 label {
 	font-size: small;
 	font-variant-caps: all-small-caps;
 	font-weight: bold;
 }
-.checkbox {
+.checkbox-container {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: flex-start;
 	align-items: center;
 }
 checkbox {
-    border: 2px solid var(--accent-color);
-    border-radius: 0.25rem;
+	border: 2px solid var(--accent-color);
+	border-radius: 0.25rem;
 }
-.checkbox label{
-    margin: 0.5rem;
+.checkbox-container label {
+	margin: 0.5rem;
 }
 button {
 	background-color: var(--button-color);
 	color: var(--background-color);
-	/* width: clamp(200px, 50%, 100%); */
-    width: 50%;
+	width: 50%;
 	border: 2px solid var(--main-text-color);
 	border-radius: 0.25rem;
 	padding: 0.5rem 1rem;
@@ -200,35 +185,90 @@ button {
 :user-valid {
 	border: green 2px solid;
 }
-/* @media screen and (max-width: 768px) {
-    .container {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    section {
-        padding: 1rem;
-    }
-    section.form {
-        width: 100%;
-    }
-    form {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-    fieldset {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-    fieldset > div {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-    button {
-        width: 100%;
-    }
-    
-} */
+
+@media screen and (max-width: 768px) {
+	main {
+		display: flex;
+		flex-direction: column;
+	}
+	.hero {
+		height: max(250px, 30vh);
+		align-items: flex-start;
+		background: darkgoldenrod;
+		background-image: url("../media/bread-background.jpeg");
+		background-image: url("../media/bread-background.jpeg"),
+			linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+		background-size: cover;
+		background-position: center;
+	}
+	.hero {
+	}
+	.logo {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		z-index: 1;
+		background-color: rgba(0, 0, 0, 0.3);
+	}
+	.logo img {
+		z-index: 2;
+
+		margin: 0;
+		padding: 0;
+	}
+	.logo h1 {
+		display: inline;
+		z-index: 2;
+		font-size: 2rem;
+		color: var(--accent-color);
+		text-align: center;
+		padding: 0;
+		margin: 0;
+		font-weight: 600;
+		font-variant-caps: all-small-caps;
+	}
+	.image-credit {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translate(-50%, 0);
+		font-size: small;
+		color: var(--accent-color);
+	}
+	.image-credit a {
+		color: var(--accent-color);
+	}
+	.container {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	section {
+		padding: 2rem;
+	}
+	section.intro {
+		justify-content: center;
+	}
+	section.form {
+		width: 100%;
+	}
+	form {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+	fieldset {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+	fieldset > div {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+	button {
+		width: 100%;
+	}
+}
