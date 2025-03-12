@@ -39,7 +39,7 @@ a {
 }
 .hero {
 	position: relative;
-	background-image: url("../media/bread-background.jpg");
+	background-image: url("../media/bread-background.jpeg");
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
