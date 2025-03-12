@@ -91,7 +91,7 @@ main {
 section {
 	background-color: var(--accent-color);
 	padding: 2rem 2rem;
-	/* height: 20vh; */
+	height: min(20vh, 100%);
 }
 .intro {
 	display: flex;
@@ -125,7 +125,6 @@ fieldset {
 	display: flex;
 	flex-direction: row;
 	width: 50%;
-	/* height: clamp(100px, 50vh, 100%); */
 	justify-content: space-between;
 	align-items: center;
 }
@@ -143,9 +142,11 @@ input {
 	padding: 0.25rem 0.5rem;
 	font-size: 1rem;
 	margin: 0;
+    height: 3rem;
+    width: max(20rem, 100%);
 }
 label {
-	font-size: small;
+	font-size: 1rem;
 	font-variant-caps: all-small-caps;
 	font-weight: bold;
 }
