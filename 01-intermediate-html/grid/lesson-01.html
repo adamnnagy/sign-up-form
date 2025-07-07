@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid lesson 01</title>
+    <style>
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 50px);
+            grid-template-rows: repeat(2, 50px);
+            grid-auto-rows: 50px;
+            {{/*  grid-auto-flow: column;
+            grid-auto-columns: 50px;  */}}
+            {{/*  grid-template: repeat(2, 50px) / 250px repeat(2, 50px);  */}}
+            {{/*  column-gap: 10px;
+            row-gap: 50px;  */}}
+            grid-gap: 20px;
+        }
+
+        .grid-container > div {
+            border: 1px solid blue;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div>Item 2</div>
+        <div>Item 1</div>
+        <div>Item 3</div>
+        <div>Item 4</div>
+        <div>Item 5</div>
+        <div>Item 6</div>
+        <div>Item 6</div>
+        <div>Item 6</div>
+        <div>Item 6</div>
+        <div>Item 6</div>
+    </div>
+</body>
+</html>
